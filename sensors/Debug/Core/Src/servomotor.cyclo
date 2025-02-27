@@ -1,0 +1,4 @@
+../Core/Src/servomotor.c:24:6:init_servo	1
+../Core/Src/servomotor.c:28:6:turnLeft	1
+../Core/Src/servomotor.c:33:6:turnRight	1
+../Core/Src/servomotor.c:37:6:reset_position	1
