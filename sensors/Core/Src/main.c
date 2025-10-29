@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "led.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -57,6 +57,13 @@ static void MX_TIM2_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+LED_HandleTypeDef led_izq = {
+		.GPIO_Port = LED_PIN_GPIO_Port,
+		.GPIO_Pin = LED_PIN_Pin,
+		.ActiveState = GPIO_PIN_RESET
+};
+
+
 /* USER CODE END 0 */
 
 /**
@@ -76,7 +83,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
+  led_init(&led_izq);
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -98,15 +105,15 @@ int main(void)
   while (1)
   {
 	  if (!HAL_GPIO_ReadPin(BUTTON_PIN_GPIO_Port, BUTTON_PIN_Pin)) {
-		  toggle_led();
+		  //toggle_led();
 		  HAL_Delay(100);
 	  }
 	  HAL_Delay(100);
-	  reset_position();
+	  //reset_position();
 	  HAL_Delay(2000);
-	  turnLeft();
+	  //turnLeft();
 	  HAL_Delay(2000);
-	  turnRight();
+	  //turnRight();
 	  HAL_Delay(2000);
     /* USER CODE END WHILE */
 

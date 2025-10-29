@@ -5,12 +5,13 @@
  *      Author: dani
  */
 
-#ifndef INC_SERVOMOTOR_H_
-#define INC_SERVOMOTOR_H_
-#endif /* INC_SERVOMOTOR_H_ */
+#ifndef __SERVOMOTOR_H__
+#define __SERVOMOTOR_H__
 
 #include "main.h"
 
 void init_servo();
 void turn();
 void reset_position();
+
+#endif /* INC_SERVOMOTOR_H_ */
